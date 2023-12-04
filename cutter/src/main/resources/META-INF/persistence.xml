@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="cutter_pu">
+        <description>Archivo de persistencia (Hibernate-JPA) Cutter</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.intelite.models.Corte</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+            <!--<property name="hibernate.connection.url" value="jdbc:oracle:thin:@99.90.100.14:1521:intelica"/>-->
+            <property name="hibernate.connection.username" value="intelite"/>
+            <property name="hibernate.connection.password" value="sagitario"/>
+            <!-- hibernate specific config - SQL visible in console -->
+            <property name="hibernate.show_sql" value="false"/>
+            <!-- hibernate specific config - additional comments with SQLs in console -->
+            <property name="hibernate.use_sql_comments" value="false"/>
+            <property name="hibernate.connection.pool_size" value="1"/>
+        </properties>
+    </persistence-unit>
+</persistence>
